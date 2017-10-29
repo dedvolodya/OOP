@@ -108,8 +108,6 @@ error_t argz_add(char **argz,
 	add_len = strlen(str) + 1;
 	dest = (char*)malloc(sizeof(char)*((*argz_len)+add_len));
 
-	free(argz);
-
 	if (dest == NULL)
 		return ERROR;
 	/*record to new string */
@@ -189,9 +187,11 @@ error_t argz_insert(char **argz,
 	int i, k, len;
 	char *result, *p;
 
-	if (before == NULL) {
+	if (before == NULL) 
 		return argz_add(argz, argz_len, entry);
-    }
+    
+	if (entry == NULL)
+		return ERROR;
 
 	p = (*argz);
 	result = (char*)malloc(sizeof(char)*((*argz_len) + strlen(entry)));
