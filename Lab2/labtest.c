@@ -1,3 +1,10 @@
+/************************************************************************
+*file: labtest.c
+*synopsis: this file has a code for testing functions
+*related files: none
+*author: Volodymyr Kravchuk
+*written: 25/09/2017
+************************************************************************/
 #include"Scanner.h"
 
 

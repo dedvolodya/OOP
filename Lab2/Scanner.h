@@ -1,3 +1,11 @@
+/************************************************************************
+*file: Scanner.h
+*synopsis: this file has a code for prototypes functions
+*related files: none
+*author: Volodymyr Kravchuk
+*written: 25/09/2017
+************************************************************************/
+
 #pragma once
 
 #include<io.h>
@@ -7,9 +15,9 @@
 
 typedef struct {
 	int id;//унікальний ідентифікатор
-	char *manufacturer;// виготовлювач
+	char manufacturer[127];// виготовлювач
 	int year;	 // рік виготовлення
-	char *model;// найменування моделі
+	char model[127];// найменування моделі
 	float price;// ціна
 	int x_size;// горизонтальний розмір області сканування
 	int y_size;// вертикальний розмір області сканування
